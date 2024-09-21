@@ -7,12 +7,13 @@ import io.codemodder.Runner;
 
 import java.util.List;
 
-public class App {
+/** Run the codemod. */
+public final class App {
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // invoke the codemod runner
         Runner.run(
-            List.of(ReadLinesCodemod.class, AddDecoratorCodemod.class),
+            List.of(AddMissingValidAssertionsToJerseyCodemod.class),
             args
         );
     }

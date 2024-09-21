@@ -9,6 +9,8 @@ repositories {
 dependencies {
     implementation(libs.codemodder.base)
     implementation(libs.codemodder.plugin.semgrep)
+    implementation(libs.langchain4j.base)
+    implementation(libs.langchain4j.openai)
 
     testImplementation(libs.junit.jupiter)
     testImplementation(libs.codemodder.testutils)

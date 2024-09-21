@@ -1,1 +1,0 @@
-This changes adds a decorator `@DoesSerialization`. to all `Serializable` types. For historical reasons, our static analysis checks expected this annotation to be everywhere we have serializable types, so this cleans up common developer toil of adding it when its missing.

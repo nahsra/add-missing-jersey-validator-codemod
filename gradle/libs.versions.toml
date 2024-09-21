@@ -1,5 +1,6 @@
 [versions]
-codemodder = "0.94.0"
+codemodder = "0.95.0"
+langchain4j = "0.34.0"
 
 [libraries]
 codemodder-base = { group = "io.codemodder", name = "codemodder-base", version.ref = "codemodder" }
@@ -7,3 +8,5 @@ codemodder-plugin-semgrep = { group = "io.codemodder", name = "codemodder-plugin
 codemodder-testutils = { group = "io.codemodder", name = "codemodder-testutils", version.ref = "codemodder" }
 junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version = "5.10.1" }
 junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "1.8.2" }
+langchain4j-base = { group = "dev.langchain4j", name = "langchain4j", version.ref = "langchain4j" }
+langchain4j-openai = { group = "dev.langchain4j", name = "langchain4j-open-ai", version.ref = "langchain4j" }

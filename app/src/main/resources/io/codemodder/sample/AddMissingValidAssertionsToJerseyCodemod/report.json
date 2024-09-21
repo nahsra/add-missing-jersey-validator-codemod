@@ -1,0 +1,7 @@
+{
+  "summary": "Adds @Valid annotation to Jersey controller DTOs",
+  "change": "Adds @Valid annotation",
+  "references": [
+    "https://www.baeldung.com/jersey-bean-validation"
+  ]
+}
