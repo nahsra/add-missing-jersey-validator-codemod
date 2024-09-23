@@ -1,0 +1,7 @@
+{
+  "summary": "Use DTO objects in controller endpoints",
+  "change": "Use DTO objects in controller endpoints",
+  "references": [
+    "https://www.baeldung.com/jersey-bean-validation"
+  ]
+}

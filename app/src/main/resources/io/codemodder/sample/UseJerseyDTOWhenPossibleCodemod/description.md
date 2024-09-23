@@ -1,0 +1,1 @@
+This change turns controllers that take `String` objects, and uses Jackson to deserialize them, into endpoints that take DTO objects instead.

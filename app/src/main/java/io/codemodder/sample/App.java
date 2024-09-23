@@ -13,7 +13,7 @@ public final class App {
     public static void main(final String[] args) {
         // invoke the codemod runner
         Runner.run(
-            List.of(AddMissingValidAssertionsToJerseyCodemod.class),
+            List.of(AddMissingValidAssertionsToJerseyCodemod.class, UseJerseyDTOWhenPossibleCodemod.class),
             args
         );
     }
