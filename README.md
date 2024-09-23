@@ -1,6 +1,8 @@
+This project holds multiple [codemodder](https://codemodder.io) codemods that help with enforcing missing validation in JAX-RS controller methods.
+
 # Add Missing Jersey Validation
 
-This [codemodder](https://codemodder.io) codemod adds missing `@Valid` annotations to Jersey controller methods.
+The first codemod adds missing `@Valid` annotations to JAX-RS controller methods.
 
 ```diff
   @Path("/example")
@@ -11,6 +13,26 @@ This [codemodder](https://codemodder.io) codemod adds missing `@Valid` annotatio
 -    public Response createMyDTO(MyDTO dto) {
 +    public Response createMyDTO(@Valid MyDTO dto) {
         // my business logic here
+        return Response.ok().build();
+    }
+  }
+```
+
+# Switch Manual String Deserialization to JAX-RS to Inject `@Valid`
+
+The next codemod switches manually deserialized object patterns to using JAX-RS's built in deserialization, which would allow the framework to automatically apply validation.
+
+```diff
+  @Path("/example")
+  public class MyController {
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+-    public Response createMyDTO(String body) {
++    public Response createMyDTO(@Valid MyDTO dto) {
+        // my business logic here
+-       MyDTO dto = new ObjectMapper().readValue(body, MyDTO.class);
+        doSomething(dto);
         return Response.ok().build();
     }
   }
